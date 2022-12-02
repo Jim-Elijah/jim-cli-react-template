@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import Layout from "./layout";
-import bus from "./utils/bus";
+import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
+import Layout from './layout'
+import { globalBus } from './utils/global'
 
-let history;
+let history
 
 export default function App() {
-  history = useHistory();
-  useEffect(() => {
-    bus.emit("interceptorFn", history);
-  });
-  return <Layout></Layout>;
+	history = useHistory()
+	useEffect(() => {
+		globalBus.emit('setHistory', history)
+	})
+	return <Layout></Layout>
 }

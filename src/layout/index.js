@@ -11,7 +11,7 @@ export default class CommonLayout extends Component {
   render() {
     return (
       <Layout style={{ height: "100%" }}>
-        <Header>Jim's CLI react template</Header>
+        <Header>Jim CLI react template</Header>
         <Layout>
           <Sider>
             <CommonSider />
@@ -23,7 +23,7 @@ export default class CommonLayout extends Component {
                 <Redirect from="/home" to="/" />
               </Switch>
             </Content>
-            <Footer>footer @{new Date().getFullYear()} by Jim</Footer>
+            <Footer>this is footer @{new Date().getFullYear()} by Jim</Footer>
           </Layout>
         </Layout>
       </Layout>
